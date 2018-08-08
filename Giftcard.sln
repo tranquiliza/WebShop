@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giftcard", "Giftcard\Giftcard.csproj", "{DE80F9FF-4B1C-4409-912E-532AC730073C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DCA73F2D-70FB-4825-9AA4-CB1F8E6E4ABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE80F9FF-4B1C-4409-912E-532AC730073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE80F9FF-4B1C-4409-912E-532AC730073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE80F9FF-4B1C-4409-912E-532AC730073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE80F9FF-4B1C-4409-912E-532AC730073C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA73F2D-70FB-4825-9AA4-CB1F8E6E4ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA73F2D-70FB-4825-9AA4-CB1F8E6E4ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA73F2D-70FB-4825-9AA4-CB1F8E6E4ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA73F2D-70FB-4825-9AA4-CB1F8E6E4ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCDE5527-24BF-49B2-BC3A-1FF0D2425759}
+	EndGlobalSection
+EndGlobal

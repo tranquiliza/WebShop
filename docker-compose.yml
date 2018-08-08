@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  giftcard:
+    image: ${DOCKER_REGISTRY}giftcard
+    build:
+      context: .
+      dockerfile: Giftcard\Dockerfile
