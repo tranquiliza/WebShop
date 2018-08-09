@@ -1,5 +1,5 @@
-﻿using Giftcard.Contracts;
-using Giftcard.Models;
+﻿using Giftcard.Contracts.Order;
+using Giftcard.Models.Order;
 using System;
 
 namespace Giftcard.Translaters

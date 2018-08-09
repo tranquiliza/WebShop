@@ -1,8 +1,6 @@
-﻿using Giftcard.Contracts;
+﻿using Giftcard.Contracts.GiftcardItem;
 using Giftcard.Repositories.Abstractions;
-using Giftcard.Services.Abstractions;
 using Giftcard.Translaters;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,20 +8,36 @@ using System.Collections.Generic;
 namespace Giftcard.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Order")]
-    public class OrderController : Controller
+    [Route("api/GiftcardItem")]
+    public class GiftcardItemController : Controller
     {
-        private readonly IOrderService _orderService;
+        private readonly IGiftcardItemRepository _giftcardItemRepository;
 
-        public OrderController(IOrderService orderService)
+        public GiftcardItemController(IGiftcardItemRepository giftcardItemRepository)
         {
-            _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
+            _giftcardItemRepository = giftcardItemRepository ?? throw new ArgumentNullException(nameof(giftcardItemRepository));
         }
 
-        [HttpPost("UpdateStatus")]
-        public void UpdateOrderStatus(UpdateOrderStatusDto updateOrderStatusDto)
+        [HttpGet]
+        public IEnumerable<GiftcardItemDto> Get()
         {
-            _orderService.UpdateOrderStatus(updateOrderStatusDto.OrderIdentifier, updateOrderStatusDto.OrderStatus.Map());
+            var result = _giftcardItemRepository.Get();
+
+            return result.Map();
+        }
+
+        [HttpGet("{Id}")]
+        public GiftcardItemDto Get(int id)
+        {
+            var result = _giftcardItemRepository.Get(id);
+
+            return result.Map();
+        }
+
+        [HttpPut("CreateGiftcard")]
+        public void CreateGiftcard(CreateGiftCardDto createGiftCardDto)
+        {
+
         }
     }
 }

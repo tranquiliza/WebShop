@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Giftcard.Models
+namespace Giftcard.Models.Order
 {
     public class OrderLine
     {

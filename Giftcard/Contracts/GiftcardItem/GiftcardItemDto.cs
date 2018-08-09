@@ -1,4 +1,4 @@
-﻿namespace Giftcard.Contracts
+﻿namespace Giftcard.Contracts.GiftcardItem
 {
     public class GiftcardItemDto
     {

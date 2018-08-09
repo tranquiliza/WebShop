@@ -1,6 +1,6 @@
-﻿namespace Giftcard.Contracts
+﻿namespace Giftcard.Models.Order
 {
-    public enum OrderStatusDto
+    public enum OrderStatus
     {
         Created = 0,
         Pending = 1,

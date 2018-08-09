@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Giftcard.Models
+namespace Giftcard.Models.Order
 {
     public class Order
     {
@@ -11,7 +11,7 @@ namespace Giftcard.Models
         public OrderStatus OrderStatus { get; private set; }
         public Customer Buyer { get; private set; }
         public Customer Recipient { get; private set; }
-        public string MessageToHotel { get; private set; }
+        public string Note { get; private set; }
 
         private Order()
         {
@@ -66,7 +66,7 @@ namespace Giftcard.Models
         {
             if (string.IsNullOrWhiteSpace(message)) throw new System.ArgumentException("Message cannot be empty.", nameof(message));
 
-            MessageToHotel = message;
+            Note = message;
         }
     }
 }

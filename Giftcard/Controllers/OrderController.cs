@@ -1,40 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Giftcard.Contracts;
-using Giftcard.Repositories.Abstractions;
+﻿using Giftcard.Contracts.Order;
+using Giftcard.Services.Abstractions;
 using Giftcard.Translaters;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Giftcard.Controllers
 {
     [Produces("application/json")]
-    [Route("api/GiftcardItem")]
-    public class GiftcardItemController : Controller
+    [Route("api/Order")]
+    public class OrderController : Controller
     {
-        private readonly IGiftcardItemRepository _giftcardItemRepository;
+        private readonly IOrderService _orderService;
 
-        public GiftcardItemController(IGiftcardItemRepository giftcardItemRepository)
+        public OrderController(IOrderService orderService)
         {
-            _giftcardItemRepository = giftcardItemRepository ?? throw new ArgumentNullException(nameof(giftcardItemRepository));
+            _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
         }
 
-        [HttpGet]
-        public IEnumerable<GiftcardItemDto> Get()
+        [HttpPost("UpdateStatus")]
+        public void UpdateStatus(UpdateOrderStatusDto updateOrderStatusDto)
         {
-            var result = _giftcardItemRepository.Get();
-
-            return result.Map();
+            _orderService.UpdateOrderStatus(updateOrderStatusDto.OrderIdentifier, updateOrderStatusDto.OrderStatus.Map());
         }
 
-        [HttpGet("{Id}")]
-        public GiftcardItemDto Get(int id)
+        [HttpPost("PlaceOrder")]
+        public void PlaceOrder(PlaceOrderDto placeOrderDto)
         {
-            var result = _giftcardItemRepository.Get(id);
-
-            return result.Map();
         }
     }
 }

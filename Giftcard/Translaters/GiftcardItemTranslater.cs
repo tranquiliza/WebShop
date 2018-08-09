@@ -1,4 +1,4 @@
-﻿using Giftcard.Contracts;
+﻿using Giftcard.Contracts.GiftcardItem;
 using Giftcard.Models;
 using System.Collections.Generic;
 

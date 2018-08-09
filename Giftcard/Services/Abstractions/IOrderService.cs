@@ -1,4 +1,4 @@
-﻿using Giftcard.Models;
+﻿using Giftcard.Models.Order;
 
 namespace Giftcard.Services.Abstractions
 {
