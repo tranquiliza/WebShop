@@ -7,6 +7,7 @@ namespace Giftcard.Models
         private ICollection<OrderLine> OrderLines { get; set; }
 
         public int Id { get; private set; }
+        public string OrderIdentifier { get; private set; }
         public OrderStatus OrderStatus { get; private set; }
         public Customer Buyer { get; private set; }
         public Customer Recipient { get; private set; }

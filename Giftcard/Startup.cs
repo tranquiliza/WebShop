@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Giftcard
 {
@@ -25,7 +26,18 @@ namespace Giftcard
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Giftcard API", Version = "v1" });
+            });
+
             services.AddMvc();
+         
+            RegisterDependencies(services);
+        }
+
+        private void RegisterDependencies(IServiceCollection services)
+        {
             services.AddScoped<IGiftcardItemRepository, GiftcardItemRepository>();
         }
 
@@ -36,6 +48,13 @@ namespace Giftcard
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Giftcard API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseMvc();
         }

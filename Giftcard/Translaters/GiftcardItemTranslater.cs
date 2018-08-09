@@ -13,7 +13,7 @@ namespace Giftcard.Translaters
                 Id = giftcardItem.Id,
                 IsPriceOverrideable = giftcardItem.IsPriceOverrideable,
                 Name = giftcardItem.Name,
-                Price = giftcardItem.Price
+                Price = giftcardItem.Price,
             };
         }
 

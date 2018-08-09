@@ -1,4 +1,5 @@
-﻿using Giftcard.Services.Abstractions;
+﻿using Giftcard.Models;
+using Giftcard.Services.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,9 @@ namespace Giftcard.Services
 {
     public class OrderService : IOrderService
     {
-
+        void IOrderService.UpdateOrderStatus(string orderIdentifier, OrderStatus orderStatus)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
