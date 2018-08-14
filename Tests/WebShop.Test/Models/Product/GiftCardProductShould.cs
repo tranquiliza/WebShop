@@ -23,7 +23,6 @@ namespace WebShop.Test.Models.Product
             Assert.Equal(Price, giftCardProduct.Price);
         }
 
-
         [Fact]
         public void Be_Created_With_Name_Price_And_Description()
         {
@@ -39,6 +38,31 @@ namespace WebShop.Test.Models.Product
             Assert.Equal(Name, giftCardProduct.Name);
             Assert.Equal(Description, giftCardProduct.Description);
             Assert.Equal(Price, giftCardProduct.Price);
+        }
+
+        [Fact]
+        public void Set_PriceOverrideable_True()
+        {
+            //Arrange
+            var giftcardProduct = new GiftcardProduct("Test Item", 100);
+
+            //Act
+            giftcardProduct.SetPriceOverrideAble(true);
+
+            //Assert
+            Assert.True(giftcardProduct.IsPriceOverrideable);
+        }
+
+        [Fact]
+        public void IsPriceOverrideable_Should_Default_False()
+        {
+            //Arrange
+            var product = new GiftcardProduct("TestItem", 1000);
+
+            //Act
+
+            //Assert
+            Assert.False(product.IsPriceOverrideable);
         }
     }
 }
