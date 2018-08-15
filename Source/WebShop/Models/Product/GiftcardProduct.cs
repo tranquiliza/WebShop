@@ -4,6 +4,22 @@ namespace WebShop.Models
 {
     public class GiftcardProduct : Product
     {
+        public string Name
+        {
+            get
+            {
+                return ProductInformation.Name;
+            }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return ProductInformation.Description;
+            }
+        }
+        
         /// <summary>
         /// If True, allows to override the price of the giftcard externally
         /// </summary>
@@ -24,20 +40,14 @@ namespace WebShop.Models
             IsPriceOverrideable = isPriceOverrideable;
         }
 
-        public string Name
+        public void UpdateName(string name)
         {
-            get
-            {
-                return ProductInformation.Name;
-            }
+            ProductInformation.UpdateName(name);
         }
 
-        public string Description
+        public void UpdateDescription(string description)
         {
-            get
-            {
-                return ProductInformation.Description;
-            }
+            ProductInformation.UpdateDescription(description);
         }
     }
 }

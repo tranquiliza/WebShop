@@ -64,5 +64,31 @@ namespace WebShop.Test.Models.Product
             //Assert
             Assert.False(product.IsPriceOverrideable);
         }
+
+        [Fact]
+        public void Update_Name()
+        {
+            //Arrange
+            var product = new GiftcardProduct("SomeName", 1000);
+
+            //Act
+            product.UpdateName("NewName");
+
+            //Assert
+            Assert.Equal("NewName", product.Name);
+        }
+
+        [Fact]
+        public void Update_Description()
+        {
+            //Arrange
+            var product = new GiftcardProduct("SomeName", "SomeDescription" ,1000);
+
+            //Act
+            product.UpdateDescription("Description");
+
+            //Assert
+            Assert.Equal("Description", product.Description);
+        }
     }
 }
