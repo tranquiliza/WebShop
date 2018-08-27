@@ -10,7 +10,7 @@ namespace WebShop.Controllers
 {
     [Produces("application/json")]
     [Route("api/GiftcardItem")]
-    public class GiftcardItemController : Controller
+    public class GiftcardItemController : ControllerBase
     {
         private readonly IGiftcardProductService _giftcardItemService;
 

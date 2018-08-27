@@ -8,7 +8,7 @@ namespace WebShop.Controllers
 {
     [Produces("application/json")]
     [Route("api/Order")]
-    public class OrderController : Controller
+    public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
 
