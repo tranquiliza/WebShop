@@ -4,7 +4,7 @@ namespace WebShop.Models.Order
 {
     class Order : Entity
     {
-        private ICollection<OrderLine> OrderLines { get; set; }
+        private ICollection<GiftCardOrderLine> OrderLines { get; set; }
 
         public string OrderIdentifier { get; private set; }
         public OrderStatus OrderStatus { get; private set; }
@@ -14,7 +14,7 @@ namespace WebShop.Models.Order
 
         private Order()
         {
-            OrderLines = new List<OrderLine>();
+            OrderLines = new List<GiftCardOrderLine>();
         }
         
         public static Order CreateNew()
@@ -24,7 +24,7 @@ namespace WebShop.Models.Order
             return newOrder;
         }
         
-        public void AddOrderLine(OrderLine orderLine)
+        public void AddOrderLine(GiftCardOrderLine orderLine)
         {
             OrderLines.Add(orderLine);
         }

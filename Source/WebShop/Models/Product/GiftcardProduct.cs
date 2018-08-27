@@ -4,6 +4,11 @@ namespace WebShop.Models
 {
     public class GiftcardProduct : Product
     {
+        /// <summary>
+        /// If True, allows to override the price of the giftcard externally
+        /// </summary>
+        public bool IsPriceOverrideable { get; private set; }
+
         public string Name
         {
             get
@@ -19,11 +24,6 @@ namespace WebShop.Models
                 return ProductInformation.Description;
             }
         }
-        
-        /// <summary>
-        /// If True, allows to override the price of the giftcard externally
-        /// </summary>
-        public bool IsPriceOverrideable { get; private set; }
 
         private GiftcardProduct() { }
 
