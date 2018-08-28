@@ -16,6 +16,7 @@ namespace WebShop.Models.Language
             if (string.IsNullOrWhiteSpace(isoCode)) throw new ArgumentException("isoCode must be given", nameof(isoCode));
 
             LanguageName = languageName;
+            IsoCode = isoCode;
         }
     }
 }
