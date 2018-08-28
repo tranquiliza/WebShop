@@ -5,8 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20180827223041_Initial.cs" />
+    <Compile Remove="Migrations\20180827223535_Initial.cs" />
+    <Compile Remove="Migrations\20180827230643_Initial.cs" />
+    <Compile Remove="Migrations\20180827233544_Initial.cs" />
+    <Compile Remove="Migrations\20180827233703_Initial.cs" />
+    <Compile Remove="Migrations\20180827235111_Second.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Factories\" />
-    <Folder Include="Context\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

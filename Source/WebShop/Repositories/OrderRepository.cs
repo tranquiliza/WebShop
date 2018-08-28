@@ -15,12 +15,12 @@ namespace WebShop.Repositories
             throw new NotImplementedException();
         }
 
-        ICollection<Order> IBaseRepository<Order>.Get()
+        async Task<ICollection<Order>> IBaseRepository<Order>.Get()
         {
             throw new NotImplementedException();
         }
 
-        Order IBaseRepository<Order>.Get(int id)
+        async Task<Order> IBaseRepository<Order>.Get(int id)
         {
             throw new NotImplementedException();
         }

@@ -17,6 +17,7 @@ namespace WebShop
             //Repositories
             services.AddScoped<IGiftcardProductRepository, GiftcardProductRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ILabelRepository, LabelRepository>();
         }
     }
 }

@@ -6,19 +6,30 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
+using WebShop.Context;
+using WebShop.Context.Abstractions;
 
 namespace WebShop
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
+
+            //Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -41,6 +52,10 @@ namespace WebShop
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<WebShopContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<IWebShopContext, WebShopContext>();
             Dependencies.Register(services);
         }
 
@@ -57,6 +72,7 @@ namespace WebShop
                 app.UseHsts();
             }
 
+            
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

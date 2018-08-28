@@ -14,7 +14,7 @@ namespace WebShop.Repositories
             throw new NotImplementedException();
         }
 
-        ICollection<GiftcardProduct> IBaseRepository<GiftcardProduct>.Get()
+        async Task<ICollection<GiftcardProduct>> IBaseRepository<GiftcardProduct>.Get()
         {
             var collection = new List<GiftcardProduct>();
             for (int i = 0; i < 10; i++)
@@ -24,7 +24,7 @@ namespace WebShop.Repositories
             return collection;
         }
 
-        GiftcardProduct IBaseRepository<GiftcardProduct>.Get(int id)
+        async Task<GiftcardProduct> IBaseRepository<GiftcardProduct>.Get(int id)
         {
             var item = new GiftcardProduct("Something", 10);
             return item;
