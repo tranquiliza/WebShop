@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebShop.Models.Language
 {
@@ -9,7 +6,7 @@ namespace WebShop.Models.Language
     {
         public string LanguageName { get; set; }
 
-        public string Iso { get; set; }
+        public string IsoCode { get; set; }
 
         private Language() { }
 

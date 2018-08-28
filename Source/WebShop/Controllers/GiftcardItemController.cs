@@ -1,10 +1,9 @@
-﻿using WebShop.Contracts.GiftcardItem;
-using WebShop.Repositories.Abstractions;
-using WebShop.Services.Abstractions;
-using WebShop.Translaters;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using WebShop.Contracts.GiftcardItem;
+using WebShop.Services.Abstractions;
+using WebShop.Translaters;
 
 namespace WebShop.Controllers
 {

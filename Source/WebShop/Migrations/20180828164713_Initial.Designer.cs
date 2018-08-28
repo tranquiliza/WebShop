@@ -10,8 +10,8 @@ using WebShop.Context;
 namespace WebShop.Migrations
 {
     [DbContext(typeof(WebShopContext))]
-    [Migration("20180828001603_Initial2")]
-    partial class Initial2
+    [Migration("20180828164713_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace WebShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WebShop.Context.Abstractions.IWebShopContext.GiftcardProducts");
+                    b.ToTable("GiftcardProducts");
                 });
 
             modelBuilder.Entity("WebShop.Models.Language.Label", b =>
@@ -46,10 +46,11 @@ namespace WebShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Label");
+                    b.ToTable("LabelsAlias");
 
                     b.HasData(
-                        new { Id = 1, Alias = "LBL_TEST_LABEL" }
+                        new { Id = 1, Alias = "LBL_TEST_LABEL" },
+                        new { Id = 2, Alias = "LBL_TEST_NUMBER_TWO" }
                     );
                 });
 
@@ -71,11 +72,13 @@ namespace WebShop.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("WebShop.Context.Abstractions.IWebShopContext.LabelValues");
+                    b.ToTable("LabelValues");
 
                     b.HasData(
                         new { Id = 1, LabelId = 1, LanguageId = 1, Value = "Dette er et test label!" },
-                        new { Id = 2, LabelId = 1, LanguageId = 2, Value = "This is a test label!" }
+                        new { Id = 2, LabelId = 1, LanguageId = 2, Value = "This is a test label!" },
+                        new { Id = 3, LabelId = 2, LanguageId = 1, Value = "Endnu et test label" },
+                        new { Id = 4, LabelId = 2, LanguageId = 2, Value = "Yet another test label" }
                     );
                 });
 
@@ -85,24 +88,24 @@ namespace WebShop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Iso");
+                    b.Property<string>("IsoCode");
 
                     b.Property<string>("LanguageName");
 
                     b.HasKey("Id");
 
-                    b.ToTable("WebShop.Context.Abstractions.IWebShopContext.Languages");
+                    b.ToTable("Languages");
 
                     b.HasData(
-                        new { Id = 1, Iso = "da-DK", LanguageName = "Danish" },
-                        new { Id = 2, Iso = "en-GB", LanguageName = "UK-English" }
+                        new { Id = 1, IsoCode = "da-DK", LanguageName = "Danish" },
+                        new { Id = 2, IsoCode = "en-GB", LanguageName = "UK-English" }
                     );
                 });
 
             modelBuilder.Entity("WebShop.Models.Language.LabelValue", b =>
                 {
-                    b.HasOne("WebShop.Models.Language.Label", "Label")
-                        .WithMany()
+                    b.HasOne("WebShop.Models.Language.Label")
+                        .WithMany("LabelValues")
                         .HasForeignKey("LabelId");
 
                     b.HasOne("WebShop.Models.Language.Language", "Language")

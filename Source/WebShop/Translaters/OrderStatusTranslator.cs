@@ -1,6 +1,6 @@
-﻿using WebShop.Contracts.Order;
+﻿using System;
+using WebShop.Contracts.Order;
 using WebShop.Models.Order;
-using System;
 
 namespace WebShop.Translaters
 {

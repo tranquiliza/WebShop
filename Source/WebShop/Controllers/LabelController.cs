@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using WebShop.Contracts.Label;
 using WebShop.Repositories.Abstractions;
 using WebShop.Translaters;
@@ -21,26 +19,31 @@ namespace WebShop.Controllers
             _labelRepository = labelRepository;
         }
 
+        /// <summary>
+        /// Returns a list of all labels, without their value
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("")]
-        public async Task<IEnumerable<LabelDto>> GetLabels()
+        public async Task<IEnumerable<LabelAliasDto>> GetLabels()
         {
             var result = await _labelRepository.Get();
 
-            var mapped = result.Select(x => x.Translate());
-
-            return mapped;
+            return result.Select(x => x.TranslateToLabelAliasDto());
         }
 
+        /// <summary>
+        /// Returns labels for the given language iso code
+        /// </summary>
+        /// <param name="isoCode"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("{isoCode}")]
-        public async Task<IEnumerable<LabelDto>> GetLabels(string isoCode)
+        public async Task<IEnumerable<LanguageLabelDto>> GetLabels(string isoCode)
         {
-            var result = await _labelRepository.Get(isoCode);
+            var result = await _labelRepository.Get();
 
-            var mapped = result.Select(x => x.Translate());
-
-            return mapped;
+            return result.Select(x => x.TranslateToLanguageLabelsFor(isoCode));
         }
     }
 }

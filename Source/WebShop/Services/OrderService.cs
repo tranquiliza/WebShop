@@ -1,6 +1,6 @@
-﻿using WebShop.Models.Order;
+﻿using System;
+using WebShop.Models.Order;
 using WebShop.Services.Abstractions;
-using System;
 
 namespace WebShop.Services
 {

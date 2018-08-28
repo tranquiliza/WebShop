@@ -1,8 +1,8 @@
-﻿using WebShop.Contracts.Order;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using WebShop.Contracts.Order;
 using WebShop.Services.Abstractions;
 using WebShop.Translaters;
-using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace WebShop.Controllers
 {

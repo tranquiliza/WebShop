@@ -1,5 +1,5 @@
-﻿using WebShop.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using WebShop.Models;
 
 namespace WebShop.Services.Abstractions
 {

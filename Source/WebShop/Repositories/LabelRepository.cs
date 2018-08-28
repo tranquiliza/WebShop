@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebShop.Context.Abstractions;
 using WebShop.Models.Language;
@@ -11,55 +10,33 @@ namespace WebShop.Repositories
 {
     public class LabelRepository : ILabelRepository
     {
-        private readonly DbSet<LabelValue> _labelValues;
+        private readonly DbSet<Label> _labelAlias;
 
         public LabelRepository(IWebShopContext webShopContext)
         {
-            _labelValues = webShopContext.LabelValues ?? throw new ArgumentNullException(nameof(webShopContext));
+            if (webShopContext == null) throw new ArgumentNullException(nameof(webShopContext));
+
+            _labelAlias = webShopContext.LabelsAlias;
         }
 
-        void IBaseRepository<LabelValue>.Delete(LabelValue entity)
+        async Task<ICollection<Label>> ILabelRepository.Get()
         {
-            throw new NotImplementedException();
-        }
-
-        async Task<ICollection<LabelValue>> IBaseRepository<LabelValue>.Get()
-        {
-            var result = await _labelValues
-                .Include(x => x.Label)
-                .Include(x => x.Language)
+            var result = await _labelAlias
+                .Include(labels => labels.LabelValues)
+                .ThenInclude(language => language.Language)
                 .ToListAsync();
 
             return result;
         }
 
-        async Task<LabelValue> IBaseRepository<LabelValue>.Get(int id)
+        async Task<Label> ILabelRepository.Get(int id)
         {
-            var result = await _labelValues
-                .FirstAsync(x => x.Id == id);
+            var result = await _labelAlias
+                .Include(label => label.LabelValues)
+                .ThenInclude(values => values.Language)
+                .SingleAsync(x => x.Id == id);
 
             return result;
-        }
-
-        async Task<IEnumerable<LabelValue>> ILabelRepository.Get(string isoCode)
-        {
-            var result = await _labelValues
-                .Include(x => x.Label)
-                .Include(x => x.Language)
-                .Where(x => x.Language.Iso == isoCode)
-                .ToListAsync();
-
-            return result;
-        }
-
-        void IBaseRepository<LabelValue>.Insert(LabelValue entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IBaseRepository<LabelValue>.Update(LabelValue entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

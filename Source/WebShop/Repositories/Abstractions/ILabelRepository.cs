@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebShop.Models.Language;
 
 namespace WebShop.Repositories.Abstractions
 {
-    public interface ILabelRepository : IBaseRepository<LabelValue>
+    public interface ILabelRepository
     {
-        Task<IEnumerable<LabelValue>> Get(string isoCode);
+        /// <summary>
+        /// Use to get ALL labels
+        /// </summary>
+        /// <returns></returns>
+        Task<ICollection<Label>> Get();
+
+        /// <summary>
+        /// Use to get a specific label
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<Label> Get(int id);
     }
 }

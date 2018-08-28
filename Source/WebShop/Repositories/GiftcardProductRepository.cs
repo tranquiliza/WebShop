@@ -1,9 +1,8 @@
-﻿using WebShop.Models;
-using WebShop.Repositories.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using WebShop.Models;
+using WebShop.Repositories.Abstractions;
 
 namespace WebShop.Repositories
 {

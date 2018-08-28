@@ -11,15 +11,21 @@
     <Compile Remove="Migrations\20180827233544_Initial.cs" />
     <Compile Remove="Migrations\20180827233703_Initial.cs" />
     <Compile Remove="Migrations\20180827235111_Second.cs" />
+    <Compile Remove="Migrations\20180827235545_Initial.cs" />
+    <Compile Remove="Migrations\20180828001603_Initial2.cs" />
+    <Compile Remove="Migrations\20180828150420_Initial.cs" />
+    <Compile Remove="Migrations\20180828153105_Test.cs" />
+    <Compile Remove="Migrations\20180828154645_Initial.cs" />
+    <Compile Remove="Migrations\20180828154943_Initial.cs" />
+    <Compile Remove="Migrations\20180828160504_Initial.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Factories\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />

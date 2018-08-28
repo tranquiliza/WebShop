@@ -10,6 +10,8 @@ namespace WebShop.Context.Abstractions
 
         DbSet<LabelValue> LabelValues { get; set; }
 
+        DbSet<Label> LabelsAlias { get; set; }
+
         DbSet<Language> Languages { get; set; }
     }
 }
