@@ -13,6 +13,7 @@ namespace WebShop
             //Application Services
             services.AddScoped<IGiftcardProductService, GiftcardProductService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ILabelService, LabelService>();
 
             //Repositories
             services.AddScoped<IGiftcardProductRepository, GiftcardProductRepository>();
