@@ -12,6 +12,9 @@ namespace WebShop.Controllers
     [ApiController]
     public class LabelController : ControllerBase
     {
+        //Perhabs this could possibly be it's own module (as in completely decoupled from the rest.)
+        // Looking at Prism style of detachment
+
         private readonly ILabelService _labelService;
 
         public LabelController(ILabelService labelService)

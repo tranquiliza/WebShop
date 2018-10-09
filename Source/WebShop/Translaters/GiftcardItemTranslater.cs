@@ -6,9 +6,9 @@ namespace WebShop.Translaters
 {
     public static class GiftcardItemTranslater
     {
-        public static GiftcardItemDto Map(this GiftcardProduct giftcardItem)
+        public static GiftcardProductDto Map(this GiftcardProduct giftcardItem)
         {
-            return new GiftcardItemDto
+            return new GiftcardProductDto
             {
                 Id = giftcardItem.Id,
                 IsPriceOverrideable = giftcardItem.IsPriceOverrideable,
@@ -17,9 +17,9 @@ namespace WebShop.Translaters
             };
         }
 
-        public static IEnumerable<GiftcardItemDto> Map(this IEnumerable<GiftcardProduct> giftcardItems)
+        public static IEnumerable<GiftcardProductDto> Map(this IEnumerable<GiftcardProduct> giftcardItems)
         {
-            var result = new List<GiftcardItemDto>();
+            var result = new List<GiftcardProductDto>();
 
             foreach (var giftcardItem in giftcardItems)
             {

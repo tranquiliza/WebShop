@@ -9,17 +9,17 @@ namespace WebShop.Controllers
 {
     [Produces("application/json")]
     [Route("api/GiftcardItem")]
-    public class GiftcardItemController : ControllerBase
+    public class GiftcardProductController : ControllerBase
     {
         private readonly IGiftcardProductService _giftcardItemService;
 
-        public GiftcardItemController(IGiftcardProductService giftcardItemService)
+        public GiftcardProductController(IGiftcardProductService giftcardItemService)
         {
             _giftcardItemService = giftcardItemService ?? throw new ArgumentNullException(nameof(giftcardItemService));
         }
 
         [HttpGet]
-        public IEnumerable<GiftcardItemDto> Get()
+        public IEnumerable<GiftcardProductDto> Get()
         {
             var result = _giftcardItemService.Get();
 
@@ -27,7 +27,7 @@ namespace WebShop.Controllers
         }
 
         [HttpGet("{Id}")]
-        public GiftcardItemDto Get(int id)
+        public GiftcardProductDto Get(int id)
         {
             var result = _giftcardItemService.Get(id);
 
@@ -35,7 +35,7 @@ namespace WebShop.Controllers
         }
 
         [HttpPost("CreateGiftcard")]
-        public void CreateGiftcard([FromBody] CreateGiftCardDto createGiftCardDto)
+        public void CreateGiftcard([FromBody] CreateGiftcardProductDto createGiftCardDto)
         {
             _giftcardItemService.CreateGiftcard(createGiftCardDto.Name, createGiftCardDto.Price);
         }

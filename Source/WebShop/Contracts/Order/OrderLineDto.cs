@@ -1,10 +1,10 @@
-﻿using WebShop.Contracts.GiftcardItem;
+﻿using WebShop.Contracts.Product;
 
 namespace WebShop.Contracts.Order
 {
     public class OrderLineDto
     {
-        public GiftcardItemDto GiftcardItem { get; set; }
+        public ProductDto GiftcardItem { get; set; }
         public int Amount { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WebShop.Contracts.GiftcardItem
 {
-    public class GiftcardItemDto
+    public class GiftcardProductDto
     {
         public int Id { get; set; }
         public int Price { get; set; }
