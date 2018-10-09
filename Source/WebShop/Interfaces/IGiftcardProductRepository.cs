@@ -2,7 +2,7 @@
 
 namespace WebShop.Repositories.Abstractions
 {
-    interface IGiftcardProductRepository : IBaseRepository<GiftcardProduct>
+    public interface IGiftcardProductRepository : IBaseRepository<GiftcardProduct>
     {
     }
 }

@@ -2,7 +2,7 @@
 
 namespace WebShop.Models
 {
-    class Customer : Entity
+    public class Customer : Entity
     {
         public string FirstName { get; private set; }
         public string Surname { get; private set; }

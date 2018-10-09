@@ -10,7 +10,7 @@ namespace WebShop.Services
     {
         private readonly IGiftcardProductRepository _giftcardItemRepository;
 
-        GiftcardProductService(IGiftcardProductRepository giftcardItemRepository)
+        public GiftcardProductService(IGiftcardProductRepository giftcardItemRepository)
         {
             _giftcardItemRepository = giftcardItemRepository ?? throw new ArgumentNullException(nameof(giftcardItemRepository));
         }

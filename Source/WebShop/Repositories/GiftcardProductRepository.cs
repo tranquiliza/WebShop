@@ -6,7 +6,7 @@ using WebShop.Repositories.Abstractions;
 
 namespace WebShop.Repositories
 {
-    class GiftcardProductRepository : IGiftcardProductRepository
+    public class GiftcardProductRepository : IGiftcardProductRepository
     {
         void IBaseRepository<GiftcardProduct>.Delete(GiftcardProduct entity)
         {

@@ -2,7 +2,7 @@
 
 namespace WebShop.Models.Order
 {
-    class Order : Entity
+    public class Order : Entity
     {
         private ICollection<GiftCardOrderLine> OrderLines { get; set; }
 

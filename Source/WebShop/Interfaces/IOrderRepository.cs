@@ -2,7 +2,7 @@
 
 namespace WebShop.Repositories.Abstractions
 {
-    interface IOrderRepository : IBaseRepository<Order>
+    public interface IOrderRepository : IBaseRepository<Order>
     {
 
     }

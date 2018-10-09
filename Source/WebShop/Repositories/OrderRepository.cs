@@ -6,7 +6,7 @@ using WebShop.Repositories.Abstractions;
 
 namespace WebShop.Repositories
 {
-    class OrderRepository : IOrderRepository
+    public class OrderRepository : IOrderRepository
     {
         void IBaseRepository<Order>.Delete(Order entity)
         {
