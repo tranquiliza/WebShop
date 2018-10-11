@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WebShop.Models.Language;
 
-namespace WebShop.Services.Abstractions
+namespace WebShop.Services.Interfaces
 {
     public interface ILabelService
     {

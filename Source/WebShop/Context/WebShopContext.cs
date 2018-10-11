@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebShop.Context.Abstractions;
+using WebShop.Context.Interfaces;
 using WebShop.Models;
 using WebShop.Models.Language;
 

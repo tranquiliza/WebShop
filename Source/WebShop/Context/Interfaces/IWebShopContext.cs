@@ -2,7 +2,7 @@
 using WebShop.Models;
 using WebShop.Models.Language;
 
-namespace WebShop.Context.Abstractions
+namespace WebShop.Context.Interfaces
 {
     public interface IWebShopContext
     {

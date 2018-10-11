@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +12,11 @@ using SimpleInjector.Integration.AspNetCore.Mvc;
 using SimpleInjector.Lifestyles;
 using Swashbuckle.AspNetCore.Swagger;
 using WebShop.Context;
-using WebShop.Context.Abstractions;
+using WebShop.Context.Interfaces;
 using WebShop.Repositories;
-using WebShop.Repositories.Abstractions;
+using WebShop.Repositories.Interfaces;
 using WebShop.Services;
-using WebShop.Services.Abstractions;
+using WebShop.Services.Interfaces;
 
 namespace WebShop
 {

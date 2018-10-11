@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using WebShop.Contracts.GiftcardItem;
-using WebShop.Services.Abstractions;
+using WebShop.Services.Interfaces;
 using WebShop.Translaters;
 
 namespace WebShop.Controllers

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using WebShop.Models;
 
-namespace WebShop.Services.Abstractions
+namespace WebShop.Services.Interfaces
 {
     public interface IGiftcardProductService
     {

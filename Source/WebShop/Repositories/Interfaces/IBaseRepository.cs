@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace WebShop.Repositories.Abstractions
+namespace WebShop.Repositories.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {

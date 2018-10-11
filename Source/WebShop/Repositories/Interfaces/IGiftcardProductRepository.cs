@@ -1,6 +1,6 @@
 ﻿using WebShop.Models;
 
-namespace WebShop.Repositories.Abstractions
+namespace WebShop.Repositories.Interfaces
 {
     public interface IGiftcardProductRepository : IBaseRepository<GiftcardProduct>
     {

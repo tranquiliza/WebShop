@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WebShop.Repositories;
-using WebShop.Repositories.Abstractions;
+using WebShop.Repositories.Interfaces;
 using WebShop.Services;
-using WebShop.Services.Abstractions;
+using WebShop.Services.Interfaces;
 
 namespace WebShop
 {

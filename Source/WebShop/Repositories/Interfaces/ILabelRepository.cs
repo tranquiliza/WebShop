@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using WebShop.Models.Language;
 
-namespace WebShop.Repositories.Abstractions
+namespace WebShop.Repositories.Interfaces
 {
     public interface ILabelRepository
     {

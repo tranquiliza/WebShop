@@ -4,7 +4,7 @@ using System.Linq;
 using WebShop.Controllers;
 using WebShop.Models;
 using WebShop.Models.Language;
-using WebShop.Services.Abstractions;
+using WebShop.Services.Interfaces;
 using Xunit;
 
 namespace WebShop.Test.Controllers

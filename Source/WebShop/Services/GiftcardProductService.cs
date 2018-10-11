@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using WebShop.Models;
-using WebShop.Repositories.Abstractions;
-using WebShop.Services.Abstractions;
+using WebShop.Repositories.Interfaces;
+using WebShop.Services.Interfaces;
 
 namespace WebShop.Services
 {

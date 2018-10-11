@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebShop.Contracts.Label;
-using WebShop.Services.Abstractions;
+using WebShop.Services.Interfaces;
 using WebShop.Translaters;
 
 namespace WebShop.Controllers

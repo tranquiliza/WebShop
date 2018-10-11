@@ -1,6 +1,6 @@
 ﻿using WebShop.Models.Order;
 
-namespace WebShop.Repositories.Abstractions
+namespace WebShop.Repositories.Interfaces
 {
     public interface IOrderRepository : IBaseRepository<Order>
     {

@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebShop.Context.Abstractions;
+using WebShop.Context.Interfaces;
 using WebShop.Models.Language;
-using WebShop.Repositories.Abstractions;
+using WebShop.Repositories.Interfaces;
 
 namespace WebShop.Repositories
 {

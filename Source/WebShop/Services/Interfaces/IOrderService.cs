@@ -1,6 +1,6 @@
 ﻿using WebShop.Models.Order;
 
-namespace WebShop.Services.Abstractions
+namespace WebShop.Services.Interfaces
 {
     public interface IOrderService
     {
