@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WebShop.Models;
+using WebShop.Models.Products;
 
 namespace WebShop.Services.Interfaces
 {

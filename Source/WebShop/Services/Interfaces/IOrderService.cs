@@ -1,4 +1,4 @@
-﻿using WebShop.Models.Order;
+﻿using WebShop.Models.Orders;
 
 namespace WebShop.Services.Interfaces
 {

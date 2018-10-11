@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WebShop.Models.Language
+namespace WebShop.Models.Languages
 {
     public class Label : Entity
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using WebShop.Contracts.GiftcardItem;
-using WebShop.Models;
+using WebShop.Models.Products;
 
 namespace WebShop.Translaters
 {

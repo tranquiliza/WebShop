@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebShop.Context.Interfaces;
-using WebShop.Models.Language;
+using WebShop.Models.Languages;
 using WebShop.Repositories.Interfaces;
 
 namespace WebShop.Repositories

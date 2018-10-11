@@ -1,6 +1,6 @@
 ﻿using System;
 using WebShop.Contracts.Order;
-using WebShop.Models.Order;
+using WebShop.Models.Orders;
 
 namespace WebShop.Translaters
 {
@@ -11,16 +11,16 @@ namespace WebShop.Translaters
             switch (orderStatusDto)
             {
                 case OrderStatusDto.Created:
-                    return OrderStatus.Created;
+                    return OrderStatus.OrderCreated;
 
                 case OrderStatusDto.Pending:
-                    return OrderStatus.Pending;
+                    return OrderStatus.PaymentPending;
 
                 case OrderStatusDto.Accepted:
-                    return OrderStatus.Accepted;
+                    return OrderStatus.PaymentAccepted;
 
                 case OrderStatusDto.Completed:
-                    return OrderStatus.Completed;
+                    return OrderStatus.OrderCompleted;
 
                 default:
                     throw new NotImplementedException("Order Status Mapping not implemented DTO -> Model");
@@ -31,16 +31,16 @@ namespace WebShop.Translaters
         {
             switch (orderStatus)
             {
-                case OrderStatus.Created:
+                case OrderStatus.OrderCreated:
                     return OrderStatusDto.Created;
 
-                case OrderStatus.Pending:
+                case OrderStatus.PaymentPending:
                     return OrderStatusDto.Pending;
 
-                case OrderStatus.Accepted:
+                case OrderStatus.PaymentAccepted:
                     return OrderStatusDto.Accepted;
 
-                case OrderStatus.Completed:
+                case OrderStatus.OrderCompleted:
                     return OrderStatusDto.Completed;
 
                 default:

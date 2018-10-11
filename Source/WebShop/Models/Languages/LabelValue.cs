@@ -1,7 +1,7 @@
 ﻿using System;
 using WebShop.Contracts.Label;
 
-namespace WebShop.Models.Language
+namespace WebShop.Models.Languages
 {
     public class LabelValue : Entity
     {

@@ -1,4 +1,6 @@
-﻿namespace WebShop.Models
+﻿using System;
+
+namespace WebShop.Models.Products
 {
     public class GiftcardProduct : Product
     {
@@ -46,6 +48,20 @@
         public void UpdateDescription(string description)
         {
             ProductInformation.UpdateDescription(description);
+        }
+
+        public void OverridePrice (int newPrice)
+        {
+            if (newPrice <= 0) throw new ArgumentException("Price given must be above 0");
+
+            if (IsPriceOverrideable)
+            {
+                Price = newPrice;
+            }
+            else
+            {
+                throw new InvalidOperationException("Cannot override price on a product that is not configured for overrideable price.");
+            }
         }
     }
 }

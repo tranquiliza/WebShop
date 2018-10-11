@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebShop.Context.Interfaces;
-using WebShop.Models;
-using WebShop.Models.Language;
+using WebShop.Models.Languages;
+using WebShop.Models.Products;
 
 namespace WebShop.Context
 {

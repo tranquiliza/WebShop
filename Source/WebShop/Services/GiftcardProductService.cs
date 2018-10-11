@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebShop.Models;
+using WebShop.Models.Products;
 using WebShop.Repositories.Interfaces;
 using WebShop.Services.Interfaces;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebShop.Models
+namespace WebShop.Models.Products
 {
     public class ProductInformation : Entity
     {

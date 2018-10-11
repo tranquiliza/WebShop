@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebShop.Models
+namespace WebShop.Models.Customers
 {
     public class Customer : Entity
     {

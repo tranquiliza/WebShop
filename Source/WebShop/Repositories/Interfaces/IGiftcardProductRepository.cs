@@ -1,4 +1,4 @@
-﻿using WebShop.Models;
+﻿using WebShop.Models.Products;
 
 namespace WebShop.Repositories.Interfaces
 {

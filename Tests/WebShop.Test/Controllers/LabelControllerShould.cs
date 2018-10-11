@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WebShop.Controllers;
 using WebShop.Models;
-using WebShop.Models.Language;
+using WebShop.Models.Languages;
 using WebShop.Services.Interfaces;
 using Xunit;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebShop.Models.Language
+namespace WebShop.Models.Languages
 {
     public class Language : Entity
     {

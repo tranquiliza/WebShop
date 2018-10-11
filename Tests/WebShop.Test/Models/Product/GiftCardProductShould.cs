@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebShop.Models;
+﻿using WebShop.Models.Products;
 using Xunit;
 
 namespace WebShop.Test.Models.Product

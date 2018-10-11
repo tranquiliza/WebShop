@@ -1,9 +1,12 @@
 ﻿using System;
+using WebShop.Models.Organisations;
 
-namespace WebShop.Models
+namespace WebShop.Models.Products
 {
     public abstract class Product : Entity
     {
+        private Organisation Organisation { get; set; }
+
         /// <summary>
         /// Information about the product
         /// </summary>

@@ -27,10 +27,5 @@ namespace WebShop.Controllers
         {
             _orderService.UpdateOrderStatus(updateOrderStatusDto.OrderIdentifier, updateOrderStatusDto.OrderStatus.Map());
         }
-
-        [HttpPost("PlaceOrder")]
-        public void PlaceOrder(PlaceOrderDto placeOrderDto)
-        {
-        }
     }
 }

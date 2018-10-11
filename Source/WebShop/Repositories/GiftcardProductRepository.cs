@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebShop.Models;
+using WebShop.Models.Products;
 using WebShop.Repositories.Interfaces;
 
 namespace WebShop.Repositories

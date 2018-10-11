@@ -1,5 +1,5 @@
 ﻿using System;
-using WebShop.Models.Order;
+using WebShop.Models.Orders;
 using WebShop.Services.Interfaces;
 
 namespace WebShop.Services

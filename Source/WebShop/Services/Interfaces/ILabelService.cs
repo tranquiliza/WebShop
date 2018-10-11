@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebShop.Models.Language;
+using WebShop.Models.Languages;
 
 namespace WebShop.Services.Interfaces
 {

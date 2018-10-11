@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using WebShop.Contracts.Label;
-using WebShop.Models.Language;
+using WebShop.Models.Languages;
 
 namespace WebShop.Translaters
 {

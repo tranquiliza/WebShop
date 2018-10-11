@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebShop.Models.Order;
+using WebShop.Models.Orders;
 using WebShop.Repositories.Interfaces;
 
 namespace WebShop.Repositories
