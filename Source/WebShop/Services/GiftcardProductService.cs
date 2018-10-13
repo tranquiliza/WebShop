@@ -8,18 +8,18 @@ namespace WebShop.Services
 {
     public class GiftcardProductService : IGiftcardProductService
     {
-        private readonly IGiftcardProductRepository _giftcardItemRepository;
+        private readonly IGiftcardProductRepository _giftcardProductRepository;
 
-        public GiftcardProductService(IGiftcardProductRepository giftcardItemRepository)
+        public GiftcardProductService(IGiftcardProductRepository giftcardProductRepository)
         {
-            _giftcardItemRepository = giftcardItemRepository ?? throw new ArgumentNullException(nameof(giftcardItemRepository));
+            _giftcardProductRepository = giftcardProductRepository ?? throw new ArgumentNullException(nameof(giftcardProductRepository));
         }
 
         void IGiftcardProductService.CreateGiftcard(string name, int price)
         {
             var giftcard = new GiftcardProduct(name, price);
 
-            _giftcardItemRepository.Insert(giftcard);
+            _giftcardProductRepository.Insert(giftcard);
         }
 
         void IGiftcardProductService.CreateGiftcard(string name, int price, bool isPriceOverrideable)
@@ -27,7 +27,7 @@ namespace WebShop.Services
             var giftcard = new GiftcardProduct(name, price);
             giftcard.SetPriceOverrideAble(isPriceOverrideable);
 
-            _giftcardItemRepository.Insert(giftcard);
+            _giftcardProductRepository.Insert(giftcard);
         }
 
         GiftcardProduct IGiftcardProductService.Get(int id)

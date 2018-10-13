@@ -5,12 +5,12 @@ namespace WebShop.Models.Products
 {
     public abstract class Product : Entity
     {
-        private Organisation Organisation { get; set; }
+        public Organisation Organisation { get; set; }
 
         /// <summary>
         /// Information about the product
         /// </summary>
-        protected ProductInformation ProductInformation { get; private set; }
+        public ProductInformation ProductInformation { get; private set; }
 
         /// <summary>
         /// Price in lowest unit (Dkk would be øre)

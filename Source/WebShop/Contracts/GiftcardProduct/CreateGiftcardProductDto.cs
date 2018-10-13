@@ -1,6 +1,6 @@
 ﻿using WebShop.Contracts.Product;
 
-namespace WebShop.Contracts.GiftcardItem
+namespace WebShop.Contracts.GiftcardProduct
 {
     public class CreateGiftcardProductDto : ProductDto
     {

@@ -1,5 +1,6 @@
 ﻿using System;
 using WebShop.Models.Orders;
+using WebShop.Models.Users;
 
 namespace WebShop.Models.Baskets
 {
@@ -8,21 +9,16 @@ namespace WebShop.Models.Baskets
         /// <summary>
         /// Placeholder for actual reference to a user.
         /// </summary>
-        public string User { get; private set; }
+        public User User { get; private set; }
 
         public Order Order { get; private set; }
 
-        //public Order Order { get; set; }
-
         private Basket() { }
 
-        public Basket(string user)
+        public Basket(User user)
         {
-            if (string.IsNullOrWhiteSpace(user)) throw new ArgumentException("Basket cannot be created without a user assigned", nameof(user));
-
             Order = new Order();
-
-            User = user;
+            User = user ?? throw new ArgumentNullException(nameof(user));
         }
 
         public void AddToBasket(OrderLine orderLine)
@@ -44,7 +40,7 @@ namespace WebShop.Models.Baskets
 
         public void CompleteOrder()
         {
-            Order.Purchase();
+            Order.PlaceOrder();
         }
     }
 }

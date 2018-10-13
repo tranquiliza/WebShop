@@ -3,8 +3,8 @@
     public enum OrderStatusDto
     {
         Created = 0,
-        Pending = 1,
-        Accepted = 2,
+        Placed = 1,
+        Dispatched = 2,
         Completed = 3
     }
 }

@@ -1,7 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebShop.Context.Interfaces;
+using WebShop.Models.Baskets;
+using WebShop.Models.Customers;
 using WebShop.Models.Languages;
+using WebShop.Models.Orders;
+using WebShop.Models.Organisations;
 using WebShop.Models.Products;
+using WebShop.Models.Users;
 
 namespace WebShop.Context
 {
@@ -16,6 +21,18 @@ namespace WebShop.Context
         public DbSet<Label> LabelsAlias { get; set; }
 
         public DbSet<Language> Languages { get; set; }
+
+        public DbSet<Basket> Baskets { get; set ; }
+
+        public DbSet<Customer> Customers { get ; set ; }
+
+        public DbSet<Order> Orders { get ; set ; }
+
+        public DbSet<Organisation> Organisations { get ; set ; }
+
+        public DbSet<Product> Products { get ; set ; }
+
+        public DbSet<User> Users { get ; set ; }
 
         #region .SEEDING.
         protected override void OnModelCreating(ModelBuilder modelBuilder)

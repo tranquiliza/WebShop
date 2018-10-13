@@ -13,11 +13,11 @@ namespace WebShop.Translaters
                 case OrderStatusDto.Created:
                     return OrderStatus.OrderCreated;
 
-                case OrderStatusDto.Pending:
-                    return OrderStatus.PaymentPending;
+                case OrderStatusDto.Placed:
+                    return OrderStatus.OrderPlaced;
 
-                case OrderStatusDto.Accepted:
-                    return OrderStatus.PaymentAccepted;
+                case OrderStatusDto.Dispatched:
+                    return OrderStatus.OrderDispatched;
 
                 case OrderStatusDto.Completed:
                     return OrderStatus.OrderCompleted;
@@ -34,11 +34,11 @@ namespace WebShop.Translaters
                 case OrderStatus.OrderCreated:
                     return OrderStatusDto.Created;
 
-                case OrderStatus.PaymentPending:
-                    return OrderStatusDto.Pending;
+                case OrderStatus.OrderPlaced:
+                    return OrderStatusDto.Placed;
 
-                case OrderStatus.PaymentAccepted:
-                    return OrderStatusDto.Accepted;
+                case OrderStatus.OrderDispatched:
+                    return OrderStatusDto.Dispatched;
 
                 case OrderStatus.OrderCompleted:
                     return OrderStatusDto.Completed;

@@ -1,29 +1,29 @@
 ﻿using System.Collections.Generic;
-using WebShop.Contracts.GiftcardItem;
+using WebShop.Contracts.GiftcardProduct;
 using WebShop.Models.Products;
 
 namespace WebShop.Translaters
 {
-    public static class GiftcardItemTranslater
+    public static class GiftcardProductTranslater
     {
-        public static GiftcardProductDto Map(this GiftcardProduct giftcardItem)
+        public static GiftcardProductDto Map(this GiftcardProduct giftcardProduct)
         {
             return new GiftcardProductDto
             {
-                Id = giftcardItem.Id,
-                IsPriceOverrideable = giftcardItem.IsPriceOverrideable,
-                Name = giftcardItem.Name,
-                Price = giftcardItem.Price,
+                Id = giftcardProduct.Id,
+                IsPriceOverrideable = giftcardProduct.IsPriceOverrideable,
+                Name = giftcardProduct.Name,
+                Price = giftcardProduct.Price,
             };
         }
 
-        public static IEnumerable<GiftcardProductDto> Map(this IEnumerable<GiftcardProduct> giftcardItems)
+        public static IEnumerable<GiftcardProductDto> Map(this IEnumerable<GiftcardProduct> giftcardProducts)
         {
             var result = new List<GiftcardProductDto>();
 
-            foreach (var giftcardItem in giftcardItems)
+            foreach (var giftcardProduct in giftcardProducts)
             {
-                result.Add(giftcardItem.Map());
+                result.Add(giftcardProduct.Map());
             }
 
             return result;
