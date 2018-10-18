@@ -23,12 +23,12 @@ namespace WebShop.Models.Orders
 
         public Order() { }
 
-        internal void AddOrderLine(OrderLine orderLine)
+        public void AddOrderLine(OrderLine orderLine)
         {
             OrderLines.Add(orderLine);
         }
 
-        internal int GetTotal()
+        public int GetTotal()
         {
             var total = 0;
 
@@ -40,7 +40,15 @@ namespace WebShop.Models.Orders
             return total;
         }
 
-        internal int GetGiftcardSubTotal()
+        public int AmountOfOrderLines
+        {
+            get
+            {
+                return OrderLines.Count;
+            }
+        }
+
+        public int GetGiftcardSubTotal()
         {
             var subTotal = 0;
 
@@ -52,17 +60,17 @@ namespace WebShop.Models.Orders
             return subTotal;
         }
 
-        internal void PlaceOrder()
+        public void PlaceOrder()
         {
             OrderStatus = OrderStatus.OrderPlaced;
         }
 
-        internal void OrderDispatched()
+        public void OrderDispatched()
         {
             OrderStatus = OrderStatus.OrderDispatched;
         }
 
-        internal void SetOrderCompleted()
+        public void SetOrderCompleted()
         {
             OrderStatus = OrderStatus.OrderCompleted;
         }

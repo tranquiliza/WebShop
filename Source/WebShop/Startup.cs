@@ -22,11 +22,11 @@ namespace WebShop
 {
     public class Startup
     {
-        private Container _container;
+        private readonly Container _container;
 
         public IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IHostingEnvironment env)
         {
             _container = new Container();
 
@@ -90,7 +90,6 @@ namespace WebShop
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-
             
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -110,12 +109,12 @@ namespace WebShop
             _container.CrossWire<IWebShopContext>(app);
 
             //Add the modules in this method.
-            InitializeModules();
+            InitializeDependencies();
 
             _container.Verify();
         }
 
-        private void InitializeModules()
+        private void InitializeDependencies()
         {
             //Language
             _container.Register<ILabelRepository, LabelRepository>();

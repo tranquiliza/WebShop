@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Order\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Source\WebShop\WebShop.csproj" />
   </ItemGroup>
 
