@@ -25,15 +25,11 @@ namespace WebShop.Models.Products
             }
         }
 
-        private GiftcardProduct() { }
+        protected GiftcardProduct() { }
 
-        public GiftcardProduct(string name, int price) : base(name, price)
-        {
-        }
+        public GiftcardProduct(string name, int price) : base(name, price) { }
 
-        public GiftcardProduct(string name, string description, int price) : base(name, description, price)
-        {
-        }
+        public GiftcardProduct(string name, string description, int price) : base(name, description, price) { }
 
         public void SetPriceOverrideAble(bool isPriceOverrideable)
         {
@@ -50,7 +46,7 @@ namespace WebShop.Models.Products
             ProductInformation.UpdateDescription(description);
         }
 
-        public void OverridePrice (int newPrice)
+        public void OverridePrice(int newPrice)
         {
             if (newPrice <= 0) throw new ArgumentException("Price given must be above 0");
 

@@ -6,7 +6,7 @@ namespace WebShop.Models.Organisations
     {
         public string OrganisationName { get; private set; }
 
-        private Organisation() { }
+        protected Organisation() { }
 
         public Organisation(string organisationName)
         {

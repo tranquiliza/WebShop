@@ -12,7 +12,7 @@ namespace WebShop.Models.Customers
         public string Country { get; private set; }
         public string PhoneNumber { get; private set; }
 
-        private Customer() { }
+        protected Customer() { }
 
         public Customer(string firstName, string surname, string address, string email, string zip, string country, string phoneNumber)
         {

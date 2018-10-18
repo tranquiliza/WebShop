@@ -4,11 +4,11 @@ namespace WebShop.Models.Languages
 {
     public class Language : Entity
     {
-        public string LanguageName { get; set; }
+        public string LanguageName { get; private set; }
 
-        public string IsoCode { get; set; }
+        public string IsoCode { get; private set; }
 
-        private Language() { }
+        protected Language () { }
 
         public Language(string languageName, string isoCode)
         {

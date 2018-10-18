@@ -8,7 +8,7 @@ namespace WebShop.Models.Products
         public string Description { get; private set; }
         //public string Language { get; private set; }
 
-        private ProductInformation() { }
+        protected ProductInformation() { }
 
         public ProductInformation(string name)
         {

@@ -9,7 +9,7 @@ namespace WebShop.Models.Languages
 
         public Language Language { get; private set; }
 
-        private LabelValue() { }
+        protected LabelValue() { }
 
         public LabelValue(string value, Language language)
         {

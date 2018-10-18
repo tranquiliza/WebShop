@@ -8,6 +8,6 @@
 
         public string DibsMerchantId { get; private set; }
 
-        private PaymentInformation() { }
+        protected PaymentInformation() { }
     }
 }

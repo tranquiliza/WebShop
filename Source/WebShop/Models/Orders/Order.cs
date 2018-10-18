@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using WebShop.Models.Customers;
 using WebShop.Models.Organisations;
 using WebShop.Models.Payments;
@@ -8,7 +7,7 @@ namespace WebShop.Models.Orders
 {
     public class Order : Entity
     {
-        public Organisation Organisation { get; set; }
+        public Organisation Organisation { get; private set; }
 
         public PaymentInformation PaymentInformation { get; private set; }
 
@@ -22,10 +21,7 @@ namespace WebShop.Models.Orders
 
         public Customer DeliveryAddress { get; private set; }
 
-
-        public Order()
-        {
-        }
+        public Order() { }
 
         internal void AddOrderLine(OrderLine orderLine)
         {

@@ -10,7 +10,7 @@ namespace WebShop.Models.Languages
 
         public ICollection<LabelValue> LabelValues { get; private set; }
 
-        private Label() { }
+        protected Label() { }
 
         public Label(string alias)
         {

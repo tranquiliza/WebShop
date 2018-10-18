@@ -13,7 +13,7 @@ namespace WebShop.Models.Baskets
 
         public Order Order { get; private set; }
 
-        private Basket() { }
+        protected Basket() { }
 
         public Basket(User user)
         {

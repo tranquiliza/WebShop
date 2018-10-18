@@ -5,11 +5,11 @@ namespace WebShop.Models.Orders
 {
     public class GiftCardOrderLine : OrderLine
     {
-        public string Message { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
+        public string Message { get; private set; }
+        public string From { get; private set; }
+        public string To { get; private set; }
 
-        private GiftCardOrderLine() : base() { } 
+        protected GiftCardOrderLine() { }
 
         public GiftCardOrderLine(GiftcardProduct giftcard, int amount, string message, string from, string to) : base(amount, giftcard)
         {

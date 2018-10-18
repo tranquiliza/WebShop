@@ -10,7 +10,7 @@ using WebShop.Context;
 namespace WebShop.Migrations
 {
     [DbContext(typeof(WebShopContext))]
-    [Migration("20181013000424_Initial")]
+    [Migration("20181018191634_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
