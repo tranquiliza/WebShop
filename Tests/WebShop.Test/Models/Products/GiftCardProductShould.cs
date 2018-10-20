@@ -1,7 +1,7 @@
 ﻿using WebShop.Models.Products;
 using Xunit;
 
-namespace WebShop.Test.Models.Products
+namespace WebShop.Tests.Models.Products
 {
     public class GiftCardProductShould
     {

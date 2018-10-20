@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebShop.Test.Models.Language
+namespace WebShop.Tests.Models.Language
 {
     class LanguageShould
     {

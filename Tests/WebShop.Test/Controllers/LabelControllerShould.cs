@@ -7,7 +7,7 @@ using WebShop.Models.Languages;
 using WebShop.Services.Interfaces;
 using Xunit;
 
-namespace WebShop.Test.Controllers
+namespace WebShop.Tests.Controllers
 {
     public class LabelControllerShould
     {

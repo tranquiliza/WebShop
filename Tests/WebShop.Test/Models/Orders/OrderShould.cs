@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebShop.Models.Orders;
+﻿using WebShop.Models.Orders;
 using WebShop.Models.Products;
 using Xunit;
 
-namespace WebShop.Test.Models.Orders
+namespace WebShop.Tests.Models.Orders
 {
     public class OrderShould
     {
