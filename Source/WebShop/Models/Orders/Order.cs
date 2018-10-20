@@ -40,7 +40,7 @@ namespace WebShop.Models.Orders
             return total;
         }
 
-        public int AmountOfOrderLines
+        public int OrderLineCount
         {
             get
             {

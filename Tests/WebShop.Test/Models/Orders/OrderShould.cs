@@ -33,7 +33,7 @@ namespace WebShop.Test.Models.Orders
             sut.AddOrderLine(orderLine);
 
             //Assert
-            Assert.Equal(1, sut.AmountOfOrderLines);
+            Assert.Equal(1, sut.OrderLineCount);
         }
     }
 }
