@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShop", "Source\WebShop\WebShop.csproj", "{DBDA3A08-6B6F-4037-A08D-684F43E7DD7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.Test", "Tests\WebShop.Test\WebShop.Test.csproj", "{C98A08D3-91F3-4EB9-AA3E-9262D0D9622B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShop.Tests", "Tests\WebShop.Test\WebShop.Tests.csproj", "{C98A08D3-91F3-4EB9-AA3E-9262D0D9622B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9496F86F-F672-4A56-8420-678999E4E9C3}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
